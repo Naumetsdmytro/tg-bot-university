@@ -1,0 +1,24 @@
+{
+  "name": "tg-bot-university",
+  "version": "1.0.0",
+  "description": "Telegram FAQ bot for the PNU distance learning system (d-learn.pnu.edu.ua).",
+  "type": "module",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js",
+    "dev": "node --watch src/bot.js",
+    "extract-images": "node scripts/extract-images.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fuse.js": "^7.0.0",
+    "grammy": "^1.30.0"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "^0.1.53",
+    "pdfjs-dist": "^4.7.76"
+  }
+}
