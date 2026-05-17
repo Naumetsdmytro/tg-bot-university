@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram-бот FAQ для СДН ПНУ — презентація</title>
+  <meta name="description" content="Сайт-презентація навчального проєкту: Telegram-бот FAQ для Системи дистанційного навчання Прикарпатського національного університету імені Василя Стефаника." />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: #1f3b5b;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .badges {
+      margin-top: 18px;
+    }
+
+    .badges a {
+      display: inline-block;
+      margin: 5px 6px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .badges a:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    section {
+      background: white;
+      margin: 20px 0;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #1f3b5b;
+      font-size: 28px;
+    }
+
+    h3 {
+      color: #1f3b5b;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .feature-card {
+      background: #f8f8f8;
+      padding: 16px 18px;
+      border-radius: 8px;
+      border-left: 4px solid #1f3b5b;
+    }
+
+    .feature-card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .team-card {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #1f3b5b;
+    }
+
+    .tech-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .tech-list li {
+      background: #f1f4f9;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid #dde3ec;
+    }
+
+    code,
+    pre {
+      font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+      font-size: 14px;
+      background: #f1f4f9;
+      border-radius: 4px;
+    }
+
+    code {
+      padding: 2px 6px;
+    }
+
+    pre {
+      padding: 14px 16px;
+      overflow-x: auto;
+      border: 1px solid #dde3ec;
+    }
+
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      margin-top: 15px;
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .screenshots img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #dde3ec;
+      background: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Telegram-бот FAQ для СДН ПНУ</h1>
+      <p>
+        Навчальний проєкт: бот-помічник із відповідями на найчастіші запитання
+        щодо роботи у Системі дистанційного навчання Прикарпатського національного
+        університету імені Василя Стефаника.
+      </p>
+      <div class="badges">
+        <a href="https://t.me/cnu_dima_bot" target="_blank" rel="noopener">▶️ Спробувати бота</a>
+        <a href="https://github.com/Naumetsdmytro/tg-bot-university" target="_blank" rel="noopener">📦 Репозиторій на GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Опис проєкту</h2>
+      <p>
+        Розроблено Telegram-бота, що допомагає студентам і викладачам швидко знаходити
+        відповіді на найчастіші запитання щодо роботи в Системі дистанційного навчання
+        <code>d-learn.pnu.edu.ua</code>. Бот має зручне меню з категоріями та вміє
+        обробляти довільні текстові запити, повертаючи найрелевантнішу відповідь
+        з бази знань. До багатьох пунктів додаються скріншоти інтерфейсу системи,
+        витягнуті з офіційної методички.
+      </p>
+    </section>
+
+    <section>
+      <h2>Мета роботи</h2>
+      <p>
+        Спростити пошук інформації про користування Системою дистанційного навчання,
+        зменшити навантаження на Центр дистанційного навчання та надати студентам і
+        викладачам уніфіковане джерело відповідей у звичному середовищі — Telegram.
+      </p>
+    </section>
+
+    <section>
+      <h2>Можливості бота</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>📋 Готові категорії</h3>
+          <p>Студентам, викладачам, методична інструкція та корисні посилання — усе у головному меню.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🔍 Пошук вільним текстом</h3>
+          <p>Користувач пише запитання своїми словами — бот шукає найрелевантнішу відповідь.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🖼️ Скріншоти зі сторінок методички</h3>
+          <p>До багатьох тем додаються зображення зі сторінок офіційного PDF-посібника.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🤔 Розумні підказки</h3>
+          <p>Якщо точної відповіді немає, бот пропонує найближчі альтернативи та офіційні джерела.</p>
+        </div>
+        <div class="feature-card">
+          <h3>✏️ Простий формат бази</h3>
+          <p>Уся база знань — один JSON-файл. Додати нове запитання займає декілька секунд.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🛡️ Безпечне зберігання токена</h3>
+          <p>Токен Telegram зберігається у файлі <code>.env</code>, що виключений з репозиторію.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Використані технології</h2>
+      <ul class="tech-list">
+        <li><strong>Node.js 20+</strong> — середовище виконання</li>
+        <li><strong>grammY</strong> — фреймворк для Telegram Bot API</li>
+        <li><strong>Fuse.js</strong> — нечіткий пошук по тексту</li>
+        <li><strong>dotenv</strong> — конфігурація через <code>.env</code></li>
+        <li><strong>pdfjs-dist</strong> — парсинг PDF-методички</li>
+        <li><strong>@napi-rs/canvas</strong> — рендеринг сторінок у PNG</li>
+        <li><strong>JSON</strong> — формат бази знань</li>
+        <li><strong>Git / GitHub</strong> — контроль версій</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Архітектура</h2>
+      <p>Проєкт організований за принципом «модульного бота»:</p>
+      <pre>tg-bot-university/
+├── src/
+│   ├── bot.js                 точка входу, команди /start, /help, /menu
+│   ├── handlers/
+│   │   ├── menu.js            побудова інлайн-клавіатур
+│   │   ├── faq.js             відправка відповіді з фото
+│   │   └── search.js          обробка вільного тексту
+│   └── search/index.js        конфігурація Fuse.js та пошук
+├── data/faq.json              база знань: 55+ пунктів з 4 категорій
+├── assets/images/             89 скріншотів сторінок методички
+├── scripts/extract-images.js  одноразовий скрипт витягу зображень з PDF
+└── docs/                      сайт-презентація проєкту</pre>
+      <p>
+        Уся база знань зберігається у структурованому файлі <code>data/faq.json</code>:
+        для кожного запитання вказано категорію, заголовок, повний текст відповіді,
+        ключові слова для пошуку та шляхи до прив'язаних зображень.
+      </p>
+    </section>
+
+    <section>
+      <h2>Як працює пошук вільним текстом</h2>
+      <ol>
+        <li>Запит користувача нормалізується (нижній регістр, прибирання лапок).</li>
+        <li>Розбивається на токени-слова довжиною від 3 символів.</li>
+        <li>Fuse.js шукає збіги у трьох полях кожного пункту бази:
+          <ul>
+            <li><code>question</code> — заголовок (вага 50%)</li>
+            <li><code>keywords</code> — ключові слова (вага 35%)</li>
+            <li><code>answer</code> — повний текст відповіді (вага 15%)</li>
+          </ul>
+        </li>
+        <li>Бали з пошуку по цілій фразі та по окремих токенах сумуються для кожного пункту.</li>
+        <li>Якщо найкращий бал ≥ 0,55 — відправляється відповідь. Якщо ≥ 0,35 — пропонуються підказки. Інакше — повідомлення про відсутність відповіді з посиланнями на офіційні джерела.</li>
+      </ol>
+      <p>
+        Алгоритм коректно обробляє опечатки, відмінки та перефразування українською мовою,
+        що було перевірено на десятках тестових запитів.
+      </p>
+    </section>
+
+    <section>
+      <h2>Етапи виконання роботи</h2>
+      <ul>
+        <li>Аналіз джерел інформації: офіційний FAQ та методичні вказівки (PDF, 89 сторінок).</li>
+        <li>Реєстрація бота через @BotFather та налаштування середовища Node.js.</li>
+        <li>Проєктування структури бази знань та категорій.</li>
+        <li>Витяг скріншотів зі сторінок PDF за допомогою <code>pdfjs-dist</code>.</li>
+        <li>Реалізація головного меню, підменю категорій та обробників натискань.</li>
+        <li>Інтеграція Fuse.js для пошуку по вільному тексту з токенізацією.</li>
+        <li>Реалізація відправки одиничних фото та медіа-груп з підписами.</li>
+        <li>Тестування на реальних запитах (опечатки, парафрази, відмінки).</li>
+        <li>Оформлення документації та сайту-презентації проєкту.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Команда та внесок учасників</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <h3>[Ваше Прізвище Ім'я]</h3>
+          <p><strong>Автор проєкту</strong></p>
+          <p>
+            Аналіз вимог, проєктування структури бота, реалізація серверної частини,
+            інтеграція Telegram Bot API, побудова бази знань на основі офіційних джерел,
+            налаштування пошуку та оформлення проєкту.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Результат роботи</h2>
+      <p>
+        Створено повноцінного Telegram-бота, який:
+      </p>
+      <ul>
+        <li>надає швидкий доступ до 55+ структурованих відповідей у 4 категоріях;</li>
+        <li>обробляє довільні запити українською мовою з підтримкою опечаток;</li>
+        <li>містить понад 80 скріншотів інтерфейсу системи з офіційної методички;</li>
+        <li>працює стабільно та має зрозумілий, зручний у розширенні код.</li>
+      </ul>
+      <p>
+        Бот доступний за посиланням <a href="https://t.me/cnu_dima_bot" target="_blank" rel="noopener">@cnu_dima_bot</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Відеоогляд проєкту</h2>
+      <p>Нижче розміщено відеодемонстрацію роботи бота.</p>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Відеодемонстрація роботи Telegram-бота FAQ"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Сайт-презентація навчального проєкту, розробленого у межах курсу Прикарпатського національного університету імені Василя Стефаника.
+  </footer>
+</body>
+</html>
